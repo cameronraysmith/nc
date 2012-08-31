@@ -13,3 +13,4 @@ ref/*
 *.xml
 copybib
 roadkill
+*.old

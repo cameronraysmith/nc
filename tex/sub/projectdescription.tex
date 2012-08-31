@@ -1,6 +1,8 @@
 \section{Motivating questions}
 
-What are the structural properties at the level of networks of neurons,
+One of the big mysteries regarding the brain is, why neurons that make amazingly complex calculations in the brain become very inefficient at computation once they are grown out of it. In particular, once you take hippocampal neurons out of the rat brain and culture them on a dish, they lose their individuality. Living neuronal cultures are characterized by all-or-none network bursts, where practically all the neurons fire simultaneously, with varying degrees of synchrony. While in the brain they can compute the trajectory of the animal in a maze, but as an ensemble grown out of it they are unable to create new computations, and can only carry very few bits of information. How is it then that individual neurons are organized in the brain as a splendid computer, but in the dish their computational repertoire becomes very limited. Obviously, their environment and growth conditions have changed, but can we isolate and pin down those elements that are necessary, and perhaps also sufficient, to support computation by a living neuronal network? In an effort to tackle such questions, we have embarked on an investigation of the computational abilities of living neuronal networks, and propose here to expand this investigation both theoretically and experimentally in several fundamental ways.
+
+On the conceptual side, a number of deep questions arise. What are the structural properties at the level of networks of neurons,
 modules of networks of neurons, and perhaps higher order forms of
 organization necessary to support the capacity for
 \href{http://en.wikipedia.org/wiki/Metalinguistic\_abstraction}{abstraction},
@@ -20,7 +22,16 @@ identifiable structural features? And, how do the structural properties
 of networks with the capacity for zeroth, first, or higher order
 computations compare?
 
-\section{Physical implementations of abstractly characterized
+On the experimental side, we plan to design a number of novel logical devices, as well as use a number of new technologies that we have acquired for the construction of such computational constructs. Notable among these are the optogenetic toolbox that has recently become available. Light induced neuronal excitation using channelrhodopsins (courtesy of the Deisseroth lab in Stanford and the Yizhar lab at Weizmann) as well as genetically encoded fluorescent labels for neuronal excitation (courtesy of the Cohen lab at Harvard).
+
+ Finally, it seems clear that evolutionary forces have shaped the architecture, connectivity as well as the input that the neurons grow with inside the brain, all of which conspire to create its tremendous computational power. Our most novel proposal is that  biological computation in general is set apart from that of electronic computers by the fact that the 'hardware' (e.g. the cell or the organism) co-evolved with the 'software' (DNA or the brain respectively). As a result, our 'software' naturally tends to the well being of the associated 'hardware', while in the computer world that is not usually the case. This insight leads us to propose experiments that will connect the neuronal network with the 'real' world, and  allow it to co-evolve with a range of different neurons and of hardware.
+
+
+
+
+
+
+\section{Physical implementations of Turing machines and other abstractly characterized
 computation}
 
 Since the development of the electronic digital computer, which makes
@@ -51,10 +62,18 @@ toward this broad goal is to investigate simple neuronal systems that
 are capable of performing well-defined computations that require a
 capacity for first- or higher-order logic.
 
+The first question to be addressed experimentally is whether a universal Turing machine can reliably be built out of central nervous system (CNS) neurons, which are essentially unreliable. We have shown previously that complex devices such as a diode, an oscillator and an AND-gate can be engineered using CNS neurons grown on particular geometric configurations. The production of a NOT-gate would complement this set and enable the construction of a universal Turing machine.
+The design we are proposing initially relies on the fact that NLD's can be strung together to form more complex structures. To form a NOT-gate, a delay line, oscillator AND gate and diode can be put together in a way that ensures that the output is continually excited (at the frequency of the oscillator) unless the Input is high. This relies on the fact that living neuronal networks have a latency period following their spike. The NOT gate can then be extended to build a NAND gate, where if excitation comes from either one of the two Input regions then it can propagate and excite the Output region, but if both fire together then one cancels the other.
+
+
 \section{A higher-order function to be implemented as a higher-order
 NLD}
 
-The $\lambda$-calculus notation is helpful in
+To design higher order computational devices, we will turn to the experimental techniques of microfluidics and of optogenetics. 
+It is now possible to monitor with optical means the electrical activity of the network without any collateral damage caused by the fluorescent dye. This is done by incorporating genetically a fluorescent voltage-indicating protein into the neuron. It is furthermore possible to excite a region of the network optically by activating photosensitive channels that are genetically embedded as well. On top of this, the propagation velocity of a signal inside a one-dimensional neuronal network of the type we are using is constant, and can be reliably predicted. Thus it becomes possible to identify activity in one part of the devices, and then excite another region co-incidentally with the arrival of the signal into that area. Different time delays, with the activation before, during or after the arrival of the synaptic input will allow the creation of several neuronal learning scenarios, and the comparison to learning in the animal itself.
+
+
+On the part of the theory, the $\lambda$-calculus notation is helpful in
 order to define any higher order function. Some of the notation may be
 implicitly familiar to users of imperative programming languages under
 the heading ``anonymous functions''. We provide only an extremely
@@ -108,7 +127,7 @@ order function
 [\lambda f:(bool \rightarrow bool \rightarrow bool).
 \lambda x:bool. \lambda y:bool.(f\,\,x\,\,y)]
 \\
-:[(bool \rightarrow bool \rightarrow bool) 
+:[(bool \rightarrow bool \rightarrow bool)
 \rightarrow bool \rightarrow bool \rightarrow bool]
 \end{multline}
 This function is intended to be read, in the less verbose uncurried
@@ -201,6 +220,7 @@ associated to $1$ and $0$.
 
 \section{Utilizing synaptic plasticity to generate higher order NLDs}
 
+ 
 In order to take advantage of the immense capacity for computation
 available in biological systems and neural networks, the biological
 complexity of each neuron and synaptic connection must be taken into
@@ -218,6 +238,8 @@ information compression. In the long term, something approximating the
 design of a ``neural VLSI'' supporting a full logic system such as the
 simply typed lambda calculus could be implemented.
 
+The experiments described in the previous section allow for the engineering of a rich and complex variety of logical device configurations. The vast richness that the theoretical considerations will enable ensures a steady flow of experimental systems that can be designed quickly to test the theoretical ideas. In that sense, the cultured living neuronal networks supply a never-ending 'Lego' toolbox for verifying and evaluating different theoretical strategies for engineered networks. The numerous parameters that can be varied and checked allow the different conceptual approaches to biological computation to be tested.  
+
 \section{From NLDs to principles of cognition}
 
 From the point of view that identifies the capacity for abstraction with
@@ -228,4 +250,7 @@ circuits. By attempting to isolate minimal implementation criteria, this
 approach may serve to complement, enable simpler explanations of, or
 identify paradoxical results derived from studies that treat whole
 brains and their associated sensory apparatus as their object of study
-\cite{McClelland2010,Griffiths2010}.
+\cite{McClelland2010,Griffiths2010}. 
+
+As noted above, we associate the failure of a cultured neuronal network to produce a valid computation with the fact that it is grown out of context, out of its natural surroundings. By geometric constraints, we have shown that we can coax some of the networks connections to go in the direction we engineer, and a modicum of computation is restored. However, the idea that the 'software' is growing without the presence of the 'hardware' it is accustomed to, leads us to the idea of co-culturing a different set of neurons along with the regular hippocampal ones. The obvious choice for us is that of sensory neurons, since those are the subset of neurons that communicate between the body of the organism and its brain. In this way we hope to recreate an information channel that exists in the developing brain, and allow the neurons in the animal to attain functional connectivity according to the inputs it receives. 
+We are thus communicating with a number of groups that study pain, with the intention of extracting neurons that can synapse onto the CNS one and convey the signals associated with stress and pain. This seems a reasonable initial choice, since the signal of pain is one that a neuron should be designed not to ignore. 
