@@ -1,4 +1,4 @@
-#PRELIM
+#Preliminary
 
 * Title of Proposed Project: The title of the proposal to NSF should begin "ICOB:...".
 Project Description (maximum 5 pages total): Include the following sections:
@@ -9,7 +9,7 @@ Project Description (maximum 5 pages total): Include the following sections:
 * Section 5: Describe the plan to facilitate meaningful involvement of students, postdoctoral researchers, and junior investigators in the proposed research, including international training experiences.
 * References Cited: Up to 10 key references may be cited to provide context for the proposed research. The References Cited section will not count against the 5-page limit for the preliminary proposal project description.
 
-#KEY
+#Directory key
 <pre>
 ├── bib **bibtex files**
 ├── clean **script to clean the directory**
@@ -20,7 +20,7 @@ Project Description (maximum 5 pages total): Include the following sections:
     └── sub **tex files for input to template documents**
 </pre>
 
-#DIRECTORY TREE (as of 08/24/2012)
+#Directory tree (as of 08/24/2012)
 <pre>
 ├── bib
 │   ├── books.bib
@@ -44,7 +44,7 @@ Project Description (maximum 5 pages total): Include the following sections:
         └── projectdescription.tex
 </pre>
 
-#LINKS
+#Links
 1. [soliciation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504768)
 1. [instructions](http://www.nsf.gov/pubs/2012/nsf12577/nsf12577.htm#prep)
 1. [NSF_gpg](http://www.nsf.gov/pubs/policydocs/pappguide/nsf11001/gpg_index.jsp)
