@@ -10,17 +10,17 @@ Project Description (maximum 5 pages total): Include the following sections:
 * References Cited: Up to 10 key references may be cited to provide context for the proposed research. The References Cited section will not count against the 5-page limit for the preliminary proposal project description.
 
 #KEY
-`
-├── bib **bibtex files**
-├── clean **script to clean the directory**
-├── etc **extra files that may be relevant**
-├── fig **figures in eps, pdf, etc**
-├── README **this file**
-└── tex **tex files: compile NSFmaster with latexmk to build the project**
-    └── sub **tex files for input to template documents**`
+
+//├── bib **bibtex files**
+//├── clean **script to clean the directory**
+//├── etc **extra files that may be relevant**
+//├── fig **figures in eps, pdf, etc**
+//├── README **this file**
+//└── tex **tex files: compile NSFmaster with latexmk to build the project**
+//    └── sub **tex files for input to template documents**
 
 #DIRECTORY TREE (as of 08/24/2012)
-`
+
 ├── bib
 │   ├── books.bib
 │   └── papers.bib
@@ -40,7 +40,7 @@ Project Description (maximum 5 pages total): Include the following sections:
     ├── NSFsumm.tex
     └── sub
         ├── header.tex
-        └── projectdescription.tex`
+        └── projectdescription.tex
 
 #LINKS
 1. [soliciation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504768)
