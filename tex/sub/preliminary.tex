@@ -49,10 +49,8 @@ computations compare?
 On the experimental side, we plan to design a number of novel logical devices, as well as use a number of new technologies that we have acquired for the construction of such computational constructs. Notable among these are the optogenetic toolbox that has recently become available. Our access to this toolbox includes light induced neuronal excitation using channelrhodopsins (courtesy of the Deisseroth lab in Stanford and the Yizhar lab at Weizmann) as well as genetically encoded fluorescent labels for neuronal excitation (courtesy of the Cohen lab at Harvard).
 
  Finally, it seems clear that evolutionary forces have shaped the architecture, connectivity as well as the input that the neurons grow with inside the brain, all of which conspire to create its tremendous computational power. Our most novel proposal is that  biological computation in general is set apart from that of electronic computers by the fact that the 'hardware' (e.g. the cell or the organism) co-evolved with the 'software' (DNA or the brain respectively). As a result, our 'software' naturally tends to the well being of the associated 'hardware', while in the computer world that is not necessarily, if ever, the case. This insight leads us to propose experiments that will connect the neuronal network with the 'real' world, and  allow the structure and function to co-evolve in a range of different environmental conditions.
- 
 
-\subsection{Physical implementations of Turing machines and other abstractly characterized
-computation}
+\subsection{\emph{Natural} models of computation in living neural networks}
 
 Since the development of the electronic digital computer, which makes
 use of the digital abstraction \cite{Ward1989} from analog electrical circuits
@@ -96,11 +94,7 @@ implicitly familiar to users of imperative programming languages under
 the heading ``anonymous functions''. We provide only an extremely
 informal set of examples necessary to explain our intended work;
 however, complete details can be found in \cite{Barendregt1985}. We can define a
-standard binary boolean function like the ``and'' function as
-\begin{equation}\label{eq:bool}
-\lambda x. \lambda y.(\wedge\,\,x\,\,y)
-\end{equation}
-Such a lambda expression can apparently be applied to any inputs;
+standard binary boolean function like the ``and'' function as $\lambda x. \lambda y.(\wedge\,\,x\,\,y)$. Such a lambda expression can apparently be applied to any inputs;
 however the inputs to such a function are not necessarily restricted to
 booleans unless we infer that the standard logical operator
 ``$\wedge$'' only accepts boolean arguments.
@@ -233,29 +227,7 @@ equation \ref{eq:lamhobf} has indeed correctly
 implemented the necessary typing constraints to claim that the function
 has been realized. In the case of neuronal logic devices, this
 alternative output should differ in a measurable way from those
-associated to $1$ and $0$.
-
-\subsection{Utilizing synaptic plasticity to generate higher order NLDs}
-
- 
-In order to take advantage of the immense capacity for computation
-available in biological systems and neural networks, the biological
-complexity of each neuron and synaptic connection must be taken into
-consideration. Namely, the presence of paired pulse depression and
-facilitation, which has been previously demonstrated in cultured
-hippocampal neurons \cite{Cummings1996}, could be exploited to create neural objects
-with similar design, but more complex behavior than existing NLDs.
-Specifically, if paired pulse coordination can be shown to exist,
-especially in the forward direction more significantly than the reverse,
-then perhaps chains of action potentials could be used as the logical
-readouts instead of single action potentials. If this is the case, then
-something approaching a hexadecimal computing system can be created
-using these logical elements, which would allow for significant
-information compression. In the long term, something approximating the
-design of a ``neural VLSI'' supporting a full logic system such as the
-simply typed lambda calculus could be implemented.
-
-The experiments described in the previous section allow for the engineering of a rich and complex variety of logical device configurations. The vast richness that the theoretical considerations will enable ensures a steady flow of experimental systems that can be designed quickly to test the theoretical ideas. In that sense, the cultured living neuronal networks supply a never-ending 'Lego' toolbox for verifying and evaluating different theoretical strategies for engineered networks. The numerous parameters that can be varied and checked allow the different conceptual approaches to biological computation to be tested.  
+associated to $1$ and $0$.  
 
 \subsection{From NLDs to principles of cognition}
 
@@ -269,7 +241,7 @@ identify paradoxical results derived from studies that treat whole
 brains and their associated sensory apparatus as their object of study
 \cite{McClelland2010,Griffiths2010}. 
 
-As noted above, we associate the failure of a cultured neuronal network to produce a valid computation with the fact that it is grown out of context, out of its natural surroundings. By geometric constraints, we have shown that we can coax some of the networks connections to go in the direction we engineer, and a modicum of computation is restored. However, the idea that the 'software' is growing without the presence of the 'hardware' it is accustomed to, leads us to the idea of co-culturing a different set of neurons along with the regular hippocampal ones. The obvious choice for us is that of sensory neurons, since those are the subset of neurons that communicate between the body of the organism and its brain. In this way we hope to recreate an information channel that exists in the developing brain, and allow the neurons in the animal to attain functional connectivity according to the inputs it receives. 
+As noted above, we associate the failure of a cultured neuronal network to produce a valid computation with the fact that it is grown out of context, out of its natural surroundings. By geometric constraints, we have shown that we can coax some of the networks connections to go in the direction we engineer, and a modicum of computation is restored \cite{Feinerman2008}. However, the idea that the 'software' is growing without the presence of the 'hardware' it is accustomed to, leads us to the idea of co-culturing a different set of neurons along with the regular hippocampal ones. The obvious choice for us is that of sensory neurons, since those are the subset of neurons that communicate between the body of the organism and its brain. In this way we hope to recreate an information channel that exists in the developing brain, and allow the neurons in the animal to attain functional connectivity according to the inputs it receives. 
 We are thus communicating with a number of groups that study pain, with the intention of extracting neurons that can synapse onto the CNS one and convey the signals associated with stress and pain. This seems a reasonable initial choice, since the signal of pain is one that a neuron should be designed not to ignore.
 
 \section{Section 4: Role and expertise of the PIs}
