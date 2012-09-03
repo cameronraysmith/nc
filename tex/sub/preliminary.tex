@@ -49,11 +49,8 @@ use of the digital abstraction \cite{Ward1989} from analog electrical circuits
 there has been a close heuristic association between boolean logic and
 computation. However, developments in formal logic over the past century
 have been largely motivated by its applications to computation and the
-theory of programming languages that sometimes build upon and sometimes
-go beyond boolean logic to support additional forms of abstraction. In
-fact, the capacity to support abstraction mirroring various systems of
-formal logic has become a means to order and thereby assign value to
-programming languages \cite{Abelson1996}. Electronic devices that are capable
+theory of programming languages that go beyond boolean logic to support additional forms of abstraction. The capacity to support abstraction mirroring various systems of
+formal logic is the primary way in which languages are compared \cite{Abelson1996}. Electronic devices that are capable
 of supporting such forms of abstraction provide a concrete physical
 instantiation of the ideas inherent to the logical systems they are
 designed to faithfully implement.
@@ -70,10 +67,9 @@ should be capable of implementing the
 $\lambda$-calculus, a natural first step
 toward this broad goal is to investigate simple neuronal systems that
 are capable of performing well-defined computations that require a
-capacity for first- or higher-order logic.
+capacity for first- or some higher-order logic.
 
-The first question to be addressed experimentally is whether a universal Turing machine can reliably be built out of central nervous system (CNS) neurons, which are essentially unreliable components. We have shown previously that complex devices such as a diode, an oscillator and an AND-gate can be engineered using CNS neurons grown on particular geometric configurations \cite{Feinerman2008}. The production of a NOT-gate would complement this set and enable the construction of a universal Turing machine.
-The design we are proposing initially relies on the fact that individual NLDs can be connected to form more complex structures. To form a NOT-gate, a delay line, oscillator AND gate and diode can be put together in a way that ensures that the output is continually excited (at the frequency of the oscillator) unless the Input is high. This relies on the fact that living neuronal networks have a latency period following their spike. The NOT gate can then be extended to build a NAND gate.
+A much broader question to be addressed experimentally is whether a reliable Turing complete formal system such as $\lambda$-calculus can be implemented using central nervous system (CNS) neurons, which are individually unreliable components. We have shown previously that complex devices such as a diode, an oscillator and an AND-gate can be engineered using CNS neurons grown on particular geometric configurations \cite{Feinerman2008}. The production of a NOT-gate would complement this set and enable the construction of a universal Turing machine. The design we are proposing initially relies on the fact that individual NLDs can be connected to form more complex structures. To form a NOT-gate, a delay line, oscillator AND gate and diode can be put together in a way that ensures that the output is continually excited (at the frequency of the oscillator) unless the input stimulus is high. This relies on the fact that living neuronal networks have a latency period following their spike. The NOT gate can then be extended to build a NAND gate.
 
 \subsection{A higher-order function to be implemented as a higher-order NLD}
 
@@ -99,11 +95,7 @@ flanking the operator as $x \wedge y$ to mean
 $y$''. We can provide explicit type
 annotations for the bound variables $x$
 and $y$, which indicate the types of
-the arguments
-\begin{equation}\label{eq:booltype}
-\lambda x:bool. \lambda y:bool.(\wedge\,\,x\,\,y)
-\end{equation}
-We can now also provide a type annotation for this expression as a whole
+the arguments $\lambda x:bool. \lambda y:bool.(\wedge\,\,x\,\,y)$. We can now also provide a type annotation for this expression as a whole
 \begin{equation}\label{eq:boolfulltype}
 [\lambda x:bool. \lambda y:bool.(\wedge\,\,x\,\,y)]:[bool \rightarrow bool \rightarrow bool]
 \end{equation}
@@ -230,11 +222,7 @@ brains and their associated sensory apparatus as their object of study
 \cite{McClelland2010,Griffiths2010}.
 
 \section{Section 4: Role and expertise of the PIs}
-Both Profs. Aviv Bergman and Elisha Moses have significant experience working in collaborative teams of experimentalists and theorists. The PIs intend this project to involve strong interaction between experiment and theory.
-
-Prof. Bergman will lead the theoretical component of this project. Prof. Bergman's expertise spans a number of theoretical areas including artificial neural networks, dynamical systems, mathematical evolutionary biology, and systems biology. The Bergman lab will develop the computational platform and analytical tools to predict neuronal architecture-function relationships, which in turn will help guide the construction of environmental conditions to guide the development of natural neural networks capable of performing fundamental computational tasks. 
-
-Prof. Moses will lead the experimental component of the project, heading a laboratory that focuses on the growth and measurement of neuronal activity in networks grown from CNS neurons from rat and mouse brain. The lab has pioneered the design of complex neuronal logical devices, has generated several new experimental paradigms combining nonlinear dynamics and statistical physics with biological physics, and has participated in the formation of novel theoretical models for engineered neuronal networks.
+Both Profs. Aviv Bergman and Elisha Moses have significant experience working in collaborative teams of experimentalists and theorists. The PIs intend this project to involve strong interaction between experiment and theory. Prof. Bergman will lead the theoretical component of this project. Prof. Bergman's expertise spans a number of theoretical areas including artificial neural networks, dynamical systems, mathematical evolutionary biology, and systems biology. The Bergman lab will develop the computational platform and analytical tools to predict neuronal architecture-function relationships, which in turn will help guide the construction of environmental conditions to guide the development of natural neural networks capable of performing fundamental computational tasks. Prof. Moses will lead the experimental component of the project, heading a laboratory that focuses on the growth and measurement of neuronal activity in networks grown from CNS neurons from rat and mouse brain. The lab has pioneered the design of complex neuronal logical devices, has generated several new experimental paradigms combining nonlinear dynamics and statistical physics with biological physics, and has participated in the formation of novel theoretical models for engineered neuronal networks.
 
 \section{Section 5: Educational involvement}
-In the Bergman lab, three Ph.D. students (Mr. Cameron Smith, Mr. Daniel Biro and Mr. Ximo Pechaun) will be involved in developing the theoretical aspect of this project in close interaction with the PI. In the Moses lab two students (1 Ph.D., Ms. Shani Stern and 1 M.Sc., to be hired) and a postdoctoral fellow (Dr. Yaron Penn) will be involved. Students and postdoctoral fellows in the Bergman and Moses labs will interact on a weekly basis via video conference. More extensive interaction will be fostered by an exchange program that we plan to engage in at crucial theory-experiment integration stages throughout the project for the purpose of increasing the level of coherence between the theoretical and experimental aspects of this work. Virtual interaction among all involved, including the public, will be fostered by an open online Wiki that will be used to organize and collaborate on this project and, more generally, support the movement for \href{http://en.wikipedia.org/wiki/Open\_notebook\_science}{Open Notebook Science}. All computer code will be made open source in accordance with the \href{http://opensource.org/licenses/MIT}{MIT license} and the codebase history will be available to the public free and in real-time on \href{http://www.github.com}{github}. Despite the fact that both labs already combine theory and experiment, they do so in very different ways and exposure to each of these models for combining theory and experiment will be crucial for these students as they move on to make very important decisions in their careers with respect to postdoctoral training and ultimately building labs of their own.
+In the Bergman lab, three Ph.D. students (Mr. Cameron Smith, Mr. Daniel Biro and Mr. Ximo Pechaun) will be involved in developing the theoretical aspect of this project in close interaction with the PI. In the Moses lab two students (1 Ph.D., Ms. Shani Stern and 1 M.Sc., to be hired) and a postdoctoral fellow (Dr. Yaron Penn) will be involved. Students and postdoctoral fellows in the Bergman and Moses labs will interact on a weekly basis via video conference. More extensive interaction will be fostered by an exchange program that we plan to engage in at crucial theory-experiment integration stages throughout the project. Virtual interaction among all involved, including the public, will be fostered by an open online Wiki that will be used to organize and collaborate on this project and, more generally, support the movement for \href{http://en.wikipedia.org/wiki/Open\_notebook\_science}{Open Notebook Science}. All computer code will be made open source in accordance with the \href{http://opensource.org/licenses/MIT}{MIT license} and the codebase history will be available to the public free and in real-time on \href{http://www.github.com}{github}. Despite the fact that both labs already combine theory and experiment, they do so in very different ways and exposure to each of these models for combining theory and experiment will be crucial for these students as they move on to make very important decisions in their careers with respect to postdoctoral training and ultimately building labs of their own.
