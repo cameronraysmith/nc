@@ -197,8 +197,18 @@ has been realized. In the case of neuronal logic devices, this
 alternative output should differ in a measurable way from those
 associated to $1$ and $0$.
 
-\subsection{Neural network simulations toward NLD design}
-In order to attempt to determine geometric configurations that may support the growth of patterned cultures of neurons capable of performing the task of switching between AND and OR gate functionality, we created an artificial neural network (ANN) model. Figure \ref{fig:hintDiag} shows Hinton diagrams for the weights of sample 3-layer 3-input 1-output feedforward ANNs trained on data representing the AND/OR gate switching task. Figure \ref{fig:nnCG} shows a heatmap where neural networks are clustered according to their respective weights in order to determine the degree to which networks capable of performing the and/or gate switching task may be clustered into a reduced number of strategies.
+\subsection{ANN simulation of abstract computation in NLDs}
+In order to facilitate the formation of a simple higher-order boolean function capable of switching between the AND and OR gate ($\wedge / \vee$) functionality as a result of the growth of patterned cultures of neurons, we designed a potential geometric constraint shown in Figure \ref{fig:aoGeo} to use in simulations of neural network development. We implemented one potential impact upon network connectivity in terms of an artificial neural network (ANN) model. Figure \ref{fig:hintDiag} shows Hinton diagrams for the weights of 3-input 3-layer 1-output feedforward ANNs trained on data representing the $\wedge / \vee$ gate switching task and selected for near perfect performance on this task. Figure \ref{fig:nnCG} shows a heatmap where neural networks are clustered according to their respective weights in order to determine the degree to which networks capable of performing the $\wedge / \vee$ gate switching task may be clustered into a reduced number of strategies despite the apparent diversity demonstrated in Figure \ref{fig:hintDiag}. We see from Figure \ref{fig:nnCG} that, while there is considerable diversity in the 50 networks sampled in our simulations, there are also relative similarities between neural network designs that are all approximately equivalent in terms of their capacity to perform $\wedge / \vee$ gate switching.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{cc}
+\subfloat[]{\label{fig:aoGeo}\includegraphics[width=0.4\textwidth]{../fig/aogeometry.pdf}}
+& \subfloat[]{\label{fig:nnCG}\includegraphics[width=0.5\textwidth]{../fig/dendrogram.pdf}}
+\end{tabular}
+\end{center}
+\caption{Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. $(a)$ the geometric constraint is shown on the left and the artificial neural network wiring diagram representing potential connections whose strength is modulated upon training of the network is shown on the right. $(b)$ A heatmap which is clustered along rows representing individual weights at particular positions within the ANN and along columns according to the ANN from which the weights derive showing the relationship between low error strategies that emerge in training 50 independent ANNs on the $\wedge / \vee$ gate switching task.}\label{fig:nnGeoDendro}
+\end{figure}
 
 \begin{figure}
 \begin{center}
@@ -220,12 +230,12 @@ In order to attempt to determine geometric configurations that may support the g
 \caption{Hinton diagrams of feedforward neural network weights for neural networks trained on the and/or gate switching task.}\label{fig:hintDiag}
 \end{figure}
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.6\textwidth]{../fig/dendrogram.pdf}
-\end{center}
-\caption{A clustered heatmap showing the relationship between low error strategies that emerge in training 50 neural networks on the and/or gate switching task.}\label{fig:nnCG}
-\end{figure}
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=0.6\textwidth]{../fig/dendrogram.pdf}
+%\end{center}
+%\caption{A clustered heatmap showing the relationship between low error strategies that emerge in training 50 neural networks on the and/or gate switching task.}\label{fig:nnCG}
+%\end{figure}
 
 \subsection{From NLDs to the CNS and principles of cognition}
 
