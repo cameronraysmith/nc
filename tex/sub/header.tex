@@ -5,20 +5,26 @@
 % that they will get their normal width if they fit onto the page, but
 % are scaled down if they would overflow the margins.
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
-\else\Gin@nat@width\fi}
-\makeatother
-\let\Oldincludegraphics\includegraphics
-\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
-\usepackage[unicode=true,
-              colorlinks=true,
-              linkcolor=blue]{hyperref}
-\hypersetup{breaklinks=true, pdfborder={0 0 0}}
+%\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+%\else\Gin@nat@width\fi}
+%\makeatother
+%\let\Oldincludegraphics\includegraphics
+%\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+\usepackage[pagebackref=true]{hyperref}
+\hypersetup{breaklinks=true,
+		    pdfborder={0 0 0},
+		    unicode=true,
+		    colorlinks=true,
+		    linkcolor=blue,
+		    urlcolor=blue,
+		    citecolor=blue}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \setcounter{secnumdepth}{0}
 \usepackage{cite}
+\usepackage{subfig}
 
 %------------------%
 % http://en.wikibooks.org/wiki/LaTeX/Packages/Listings
@@ -56,21 +62,21 @@
   morekeywords={*,...}               % if you want to add more keywords to the set
 }
 
-% indent paragraphs
-\parindent 0.1in
-% remove whitespace
-\setlength{\parskip}{0pt}
-\setlength{\parsep}{0pt}
-\setlength{\headsep}{0pt}
-\setlength{\topskip}{0pt}
-\setlength{\topmargin}{0pt}
-\setlength{\topsep}{0pt}
-\setlength{\partopsep}{0pt}
-
-% remove whitespace around section titles
-\usepackage[compact]{titlesec}
-\titlespacing{\section}{0pt}{*0}{*0}
-\titlespacing{\subsection}{0pt}{*0}{*0}
-\titlespacing{\subsubsection}{0pt}{*0}{*0}
+%% indent paragraphs
+%\parindent 0.1in
+%% remove whitespace
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt}
+%\setlength{\headsep}{0pt}
+%\setlength{\topskip}{0pt}
+%\setlength{\topmargin}{0pt}
+%\setlength{\topsep}{0pt}
+%\setlength{\partopsep}{0pt}
+%
+%% remove whitespace around section titles
+%\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{*0}{*0}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
 
 %------------------%

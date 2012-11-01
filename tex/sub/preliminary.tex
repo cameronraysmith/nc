@@ -1,6 +1,4 @@
-\begin{center}
-ICOB: Theory of computation in cell cultured neural networks
-\end{center}
+\section{ICOB: Theory of computation in cell cultured neural networks}
 \section{Section 1: Contact information for the Israeli PI}
 \noindent Prof. Elisha Moses, Weizmann Institute of Science, +917-8-934-3139, \href{mailto:elisha.moses@weizmann.ac.il}{elisha.moses@weizmann.ac.il}
 %\begin{tabular}{ l l }
@@ -19,10 +17,8 @@ ICOB: Theory of computation in cell cultured neural networks
 \noindent BIO/IOS Neural Systems NSF 11-572. Our proposed work is most appropriate for the IOS neural systems section as it deals with fundamental questions relating to the computational capabilities of the central nervous systems of living organisms. The associated questions we intend to address are fundamental to an integrative understanding of structure-function physiology and co-evolution in all organisms with nervous systems and the evolutionary predecessors that gave rise to them. With respect to nervous system \emph{organization}, we intend to deepen previous explorations into the interaction of developmental and environmental constraints on the architecture and complementary computational capacity of networks of living neurons. Focusing on flexible abstract models of computation, rather than those specific to digital electronics, will enable us to investigate potentially novel computational potential implemented via architectures that differ from digital electronics in their apparent ability to take advantage of synergy between stochastic and deterministic properties. We may therefore, in addition to contributing to fundamental biological understanding, identify computational principles unique to natural neural networks. It is essential in this project to link theoretical, computational and experimental methods of inquiry. This is necessary to address questions we ask regarding co-evolution and co-development between underlying biological organization and computational tasks such structures are capable of performing in a variety of environmental conditions. We have assembled a culturally diverse and interdisciplinary team of experienced and developing scientists to enable the success of the research program we propose.
 
 \section{Section 3: Research description}
-\label{sec:description}
 
 \subsection{Motivating questions}
-\label{sec:questions}
 One question regarding the brain is, why neurons that perform astoundingly complex calculations become inefficient at computation once they are grown outside of it. In particular, once one takes hippocampal neurons out of the rat brain and cultures them on a dish, they lose their individuality. Living neuronal cultures are characterized by all-or-none network bursts, where practically all the neurons fire simultaneously, with varying degrees of synchrony. While in the brain they can compute the trajectory of the animal in a maze, but as an ensemble grown out of it they seem unable to perform new computations, and can only carry very few bits of information \cite{Feinerman2006}. How is it then that individual neurons are organized in the brain as a splendid computer, but in the dish their computational repertoire seems limited? Obviously, their environment and growth conditions have changed, but can we isolate those elements that are necessary, and perhaps sufficient, to support computation by a living neuronal network? In an effort to tackle such questions, we have embarked on an investigation of the computational abilities of living neuronal networks, and propose here to expand this investigation both theoretically and experimentally.
 
 On the conceptual side, a number of deep questions arise. What are the structural properties at the level of networks of neurons,
@@ -201,6 +197,36 @@ has been realized. In the case of neuronal logic devices, this
 alternative output should differ in a measurable way from those
 associated to $1$ and $0$.
 
+\subsection{Neural network simulations toward NLD design}
+In order to attempt to determine geometric configurations that may support the growth of patterned cultures of neurons capable of performing the task of switching between AND and OR gate functionality, we created an artificial neural network (ANN) model. Figure \ref{fig:hintDiag} shows Hinton diagrams for the weights of sample 3-layer 3-input 1-output feedforward ANNs trained on data representing the AND/OR gate switching task. Figure \ref{fig:nnCG} shows a heatmap where neural networks are clustered according to their respective weights in order to determine the degree to which networks capable of performing the and/or gate switching task may be clustered into a reduced number of strategies.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{cccc}
+\subfloat[]{\includegraphics[width=0.2\textwidth,page=1]{../fig/combined.pdf}} 
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=2]{../fig/combined.pdf}}
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=3]{../fig/combined.pdf}} 
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=4]{../fig/combined.pdf}}\\
+   \subfloat[]{\includegraphics[width=0.2\textwidth,page=5]{../fig/combined.pdf}} 
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=6]{../fig/combined.pdf}}
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=7]{../fig/combined.pdf}} 
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=8]{../fig/combined.pdf}}\\
+   \subfloat[]{\includegraphics[width=0.2\textwidth,page=9]{../fig/combined.pdf}} 
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=10]{../fig/combined.pdf}}
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=11]{../fig/combined.pdf}} 
+   & \subfloat[]{\includegraphics[width=0.2\textwidth,page=12]{../fig/combined.pdf}}
+\end{tabular}
+\end{center}
+\caption{Hinton diagrams of feedforward neural network weights for neural networks trained on the and/or gate switching task.}\label{fig:hintDiag}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{../fig/dendrogram.pdf}
+\end{center}
+\caption{A clustered heatmap showing the relationship between low error strategies that emerge in training 50 neural networks on the and/or gate switching task.}\label{fig:nnCG}
+\end{figure}
+
 \subsection{From NLDs to the CNS and principles of cognition}
 
 As noted above, we associate the failure of a cultured neuronal network to produce a valid computation with the fact that it is grown out of context, out of its natural surroundings. By using geometric constraints, we have shown that we can coax some of the networks connections to go in the direction we engineer, and a modicum of computation is restored \cite{Feinerman2008}. However, the idea that the `software' is growing without the presence of the `hardware' it is accustomed to, leads us to the idea of co-culturing a different set of neurons along with the regular hippocampal ones. The obvious choice for us is that of sensory neurons, since those are the subset of neurons that communicate between the body of the organism and its brain. In this way we hope to recreate an information channel that exists in the developing brain, allowing neurons to attain functional connectivity according to the inputs it receives.
@@ -220,4 +246,4 @@ brains and their associated sensory apparatus as their object of study
 Both Profs. Aviv Bergman and Elisha Moses have significant experience working in collaborative teams of experimentalists and theorists. The PIs intend this project to involve strong interaction between experiment and theory. Prof. Bergman will lead the theoretical component of this project. Prof. Bergman's expertise spans a number of theoretical areas including artificial neural networks, dynamical systems, mathematical evolutionary biology, and systems biology. The Bergman lab will develop the computational platform and analytical tools to predict neuronal architecture-function relationships, which in turn will help guide the construction of environmental conditions to guide the development of natural neural networks capable of performing fundamental computational tasks. Prof. Moses will lead the experimental component of the project, heading a laboratory that focuses on the growth and measurement of neuronal activity in networks grown from CNS neurons from rat and mouse brain. The lab has pioneered the design of complex neuronal logical devices, has generated several new experimental paradigms combining nonlinear dynamics and statistical physics with biological physics, and has participated in the formation of novel theoretical models for engineered neuronal networks.
 
 \section{Section 5: Educational involvement}
-In the Bergman lab, three Ph.D. students (Mr. Cameron Smith, Mr. Daniel Biro and Mr. Ximo Pechaun) will be involved in developing the theoretical aspect of this project in close interaction with the PI. In the Moses lab two students (1 Ph.D., Ms. Shani Stern and 1 M.Sc., to be hired) and a postdoctoral fellow (Dr. Yaron Penn) will be involved. Students and postdoctoral fellows in the Bergman and Moses labs will interact on a weekly basis via video conference. More extensive interaction will be fostered by an exchange program that we plan to engage in at crucial theory-experiment integration stages throughout the project. Virtual interaction among all involved, including the public, will be fostered by an open online Wiki that will be used to organize and collaborate on this project and, more generally, support the movement for \href{http://en.wikipedia.org/wiki/Open\_notebook\_science}{Open Notebook Science}. All computer code will be made open source in accordance with the \href{http://opensource.org/licenses/MIT}{MIT license} and the codebase history will be available to the public free and in real-time on \href{http://www.github.com}{github}. Despite the fact that both labs already combine theory and experiment, they do so in very different ways and exposure to each of these models for combining theory and experiment will be crucial for these students as they move on to make very important decisions in their careers with respect to postdoctoral training and ultimately building labs of their own.
+In the Bergman lab, three Ph.D. students (Mr. Cameron Smith, Mr. Daniel Biro and Mr. Ximo Pechaun) will be involved in developing the theoretical aspect of this project in close interaction with the PI. In the Moses lab two students (1 Ph.D., Ms. Shani Stern and 1 M.Sc., to be hired) and a postdoctoral fellow (Dr. Yaron Penn) will be involved. Students and postdoctoral fellows in the Bergman and Moses labs will interact on a weekly basis via video conference. More extensive interaction will be fostered by an exchange program that we plan to engage in at crucial theory-experiment integration stages throughout the project. Virtual interaction among all involved, including the public, will be fostered by an open online \href{http://en.wikipedia.org/wiki/Wiki}{Wiki} that will be used to organize and collaborate on this project and, more generally, support the movement for \href{http://en.wikipedia.org/wiki/Open\_notebook\_science}{Open Notebook Science}. All computer code will be made open source in accordance with the \href{http://opensource.org/licenses/MIT}{MIT license} and the codebase history will be available to the public free and in real-time on \href{http://www.github.com}{github}. Despite the fact that both labs already combine theory and experiment, they do so in very different ways and exposure to each of these models for combining theory and experiment will be crucial for these students as they move on to make very important decisions in their careers with respect to postdoctoral training and ultimately building labs of their own.
