@@ -197,17 +197,46 @@ has been realized. In the case of neuronal logic devices, this
 alternative output should differ in a measurable way from those
 associated to $1$ and $0$.
 
-\subsection{ANN simulation of abstract computation in NLDs}
-In order to facilitate the formation of a simple higher-order boolean function capable of switching between the AND and OR gate ($\wedge / \vee$) functionality as a result of the growth of patterned cultures of neurons, we designed a potential geometric constraint shown in Figure \ref{fig:aoGeo} to use in simulations of neural network development. We implemented one potential impact upon network connectivity in terms of an artificial neural network (ANN) model. Figure \ref{fig:hintDiag} shows Hinton diagrams for the weights of 3-input 3-layer 1-output feedforward ANNs trained on data representing the $\wedge / \vee$ gate switching task and selected for near perfect performance on this task. Figure \ref{fig:nnCG} shows a heatmap where neural networks are clustered according to their respective weights in order to determine the degree to which networks capable of performing the $\wedge / \vee$ gate switching task may be clustered into a reduced number of strategies despite the apparent diversity demonstrated in Figure \ref{fig:hintDiag}. We see from Figure \ref{fig:nnCG} that, while there is considerable diversity in the 50 networks sampled in our simulations, there are also relative similarities between neural network designs that are all approximately equivalent in terms of their capacity to perform $\wedge / \vee$ gate switching.
+\subsection{Experimental design}
+Engineering ''flexible'' living neuronal networks that will switch between several possible logical functions according to the input presented to them is a significant experimental challenge. Of course, designs that are possible and relevant theoretically such as the pattern of Figure \ref{fig:nnGeo}, can pose several novel concepts in the experimental implementation of the network. In particular, the connectivity between different parts of the culture has to be precisely tailored to the specifications of the theoretical outlay. The first aspect of this is that the connections must, at times, cross each other without intersecting. The second is that the connections are all given a particular directionality, and the third is that a hierarchy of connections is assumed, with their importance changing in space.
+
+The experimental approach to these difficulties is to use three novel techniques that have been introduced into the field recently, and include tapering geometric guidance, microfluidic 3D overlay and temporal patterning by sequential seeding of cultures at different times into different areas of the pattern.
+
+Our solution to this variety of challenges will be based on the microfluidic environment that we have been developing in the laboratory for the growth of neuronal cultures. We have solved the aspect of directionality in previous work \cite{Feinerman2008} by geometric patterning that funnels the growth of axons in one direction. The addition of the microfluidic construction is very useful for axonal guidance \cite{Peyrin2011,Park2006,Taylor2005}, only the axon can traverse a long thin channel. In addition, the tapering of the channel towards the Output section creates a high density that does not allow axons to traverse in the other direction. This is commonly used in conjunction with ‘temporal patterning’, where the Input section is seeded a day or two before the Output section. Neurons then develop first in the Input section and connections are made from the Input to the Output, with the axons traversing in one direction rather than the other.
+Figure \ref{fig:expdesign}a shows the basic structure in which a limited number of axons are allowed to propagate from the Input area into the Output one. The tapering of the channels towards the end at which the Output is located has been shown \cite{Peyrin2011} to eliminate the possibility of axonal crossing in the opposite direction. Figure \ref{fig:expdesign}b shows how two such constructs are united to create a simple AND gate. The array of columns at the entrance to the Output area serve to guide the axons and allow some variability and control over the amount of interaction that the axons undergo before entering the Output. In this way a transition can be precisely controlled between homogenously and inhomogenously distributed axons from Inputs 1 and 2 among the entrance channels into the Output.
 
 \begin{figure}
 \begin{center}
-\begin{tabular}{cc}
-\subfloat[]{\label{fig:aoGeo}\includegraphics[width=0.4\textwidth]{../fig/aogeometry.pdf}}
-& \subfloat[]{\label{fig:nnCG}\includegraphics[width=0.5\textwidth]{../fig/dendrogram.pdf}}
-\end{tabular}
+\includegraphics[width=0.5\textwidth]{../fig/expdesign.png}
+\caption{Schematic representation of tapered guidance microfluidic NLDs. The basic Threshold element is depicted in (a), where the tapered guidance of axons from Input to Output is demonstrated. A limited number of axons cross into the Output, causing only amplitudes that are larger than a given threshold amplitude to be transferred into the Output. In (b) the principle of combining two of the devices into an AND gate is shown. The columns in the mixing region of the axons, before entering the Input region, allow for a controlled interaction and combination of axons from the two Input regions into the Output region.}\label{fig:expdesign}
 \end{center}
-\caption{Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. $(a)$ the geometric constraint is shown on the left and the artificial neural network wiring diagram representing potential connections whose strength is modulated upon training of the network is shown on the right. $(b)$ A heatmap which is clustered along rows representing individual weights at particular positions within the ANN and along columns according to the ANN from which the weights derive showing the relationship between low error strategies that emerge in training 50 independent ANNs on the $\wedge / \vee$ gate switching task.}\label{fig:nnGeoDendro}
+\end{figure}
+
+More complex patterns, similar in spirit to the one shown in Figure \ref{fig:nnGeo}, necessitate a number of crossover connections, where axons pass next to or across each other yet do not touch. These will be achieved by patterning an additional layer of microfluidic above the initial pattern, in which the axonal connections (for example from Input 1) can pass over the axons extending from another area (for example from Input 2). Although 3D overlay has not been used to date in neuronal cultures and is technically more demanding, the principles underlying its use and the technology \cite{Rotem2012} itself are similar to the standard 2D patterning that is used in our laboratory.
+An innovative aspect of the theoretical design in Figure 1, which has not been emphasized to date in the construction of NLDs, is the existence of multiple regions that serve as alternate Output areas. In particular this answers the need, raised in the theoretical part of this proposal, to differentiate the various Input patterns by the ability of the NLD to process them. Be it due to their temporal sequence or their spatial form, there will typically be a large set of Inputs that a given NLD is unable to process. In such cases we would like the NLD to classify the Input as ‘unsuitable’ for processing, and yield an ERROR message at its Output. We would thus expect a large number of input configurations to flow into this ‘nonsense Input’ bin, which is in fact what any competent information processing or computation system must be able to do.
+In addition, we expect to utilize ‘temporal patterning’, an important addition to our existing ‘spatial patterning’ effort, to a greater degree and to rely on this novel approach more in the construction of NLDs. By controlling the sequence of seeding of neurons inside the NLD, we have already been able, in preliminary experiments, to get behavior that is very different from regular, same-time NLDs. This approach relies on the fact that neurons taken from embryonic rats or mice are promiscuous in their connections to other neurons from a different animal, a property that does not exist in the living animal where the immune system is expected to play an important role in allowing such connectivity (though this is overcome in our lab by the use of siblings from the same litter).
+
+As in any successful experimental design effort, we expect a continuous back-and-forth process between the lab and the theory, with ideas for novel implementations of NLDs stemming from the theoretical, fundamental considerations being tested out in the lab. This will serve as an immediate reality check (within the limitations of experimental time scales, of course) for the conceptual ideas. Both the ability to construct such NLDs and the actual function in practice versus that predicted will be monitored in this way. We expect this type of collaboration of theory and experiment to be extremely conducive to obtaining efficient NLDs on one and deep insight into fundamental issues of biological computation on the other. 
+
+
+\subsection{ANN simulation of abstract computation in NLDs}
+In order to facilitate the formation of a simple higher-order boolean function capable of switching between the AND and OR gate ($\wedge / \vee$) functionality as a result of the growth of patterned cultures of neurons, we designed a potential geometric constraint shown in Figure \ref{fig:nnGeo} to use in simulations of neural network development. We implemented one potential impact upon network connectivity in terms of an artificial neural network (ANN) model. Figure \ref{fig:hintDiag} shows Hinton diagrams for the weights of 3-input 3-layer 1-output feedforward ANNs trained on data representing the $\wedge / \vee$ gate switching task and selected for near perfect performance on this task. Figure \ref{fig:nnDendro} shows a heatmap where neural networks are clustered according to their respective weights in order to determine the degree to which networks capable of performing the $\wedge / \vee$ gate switching task may be clustered into a reduced number of strategies despite the apparent diversity demonstrated in Figure \ref{fig:hintDiag}. We see from Figure \ref{fig:nnDendro} that, while there is considerable diversity in the 50 networks sampled in our simulations, there are also relative similarities between neural network designs that are all approximately equivalent in terms of their capacity to perform $\wedge / \vee$ gate switching.
+
+%\begin{figure}
+%\begin{center}
+%\begin{tabular}{cc}
+%\subfloat[]{\label{fig:aoGeo}\includegraphics[width=0.4\textwidth]{../fig/aogeometry.pdf}}
+%& \subfloat[]{\label{fig:nnCG}\includegraphics[width=0.5\textwidth]{../fig/dendrogram.pdf}}
+%\end{tabular}
+%\end{center}
+%\caption{Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. $(a)$ the geometric constraint is shown on the left and the artificial neural network wiring diagram representing potential connections whose strength is modulated upon training of the network is shown on the right. $(b)$ A heatmap which is clustered along rows representing individual weights at particular positions within the ANN and along columns according to the ANN from which the weights derive showing the relationship between low error strategies that emerge in training 50 independent ANNs on the $\wedge / \vee$ gate switching task.}\label{fig:nnGeoDendro}
+%\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{../fig/aogeometry.pdf}
+\end{center}
+\caption{Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. The geometric constraint is shown on the left and the artificial neural network wiring diagram representing potential connections whose strength is modulated upon training of the network is shown on the right.}\label{fig:nnGeo}
 \end{figure}
 
 \begin{figure}
@@ -228,6 +257,13 @@ In order to facilitate the formation of a simple higher-order boolean function c
 \end{tabular}
 \end{center}
 \caption{Hinton diagrams of feedforward neural network weights for neural networks trained on the and/or gate switching task.}\label{fig:hintDiag}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.5\textwidth]{../fig/dendrogram.pdf}
+\end{center}
+\caption{Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. A heatmap that is clustered along rows representing individual weights at particular positions within the ANN and along columns according to the ANN from which the weights derive showing the relationship between low error strategies that emerge in training 50 independent ANNs on the $\wedge / \vee$ gate switching task.}\label{fig:nnDendro}
 \end{figure}
 
 %\begin{figure}
