@@ -45,7 +45,7 @@ Project Description (maximum 5 pages total): Include the following sections:
 </pre>
 
 #Links
-1. [soliciation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504768)
+1. [solicitation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504768)
 1. [instructions](http://www.nsf.gov/pubs/2012/nsf12577/nsf12577.htm#prep)
 1. [NSF_gpg](http://www.nsf.gov/pubs/policydocs/pappguide/nsf11001/gpg_index.jsp)
 1. [NSF_template](http://math.mit.edu/services/nsf/NSFTemplate.tar.gz)
