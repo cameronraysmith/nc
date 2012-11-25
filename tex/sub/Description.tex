@@ -19,12 +19,12 @@
 \section{Research description}
 
 \subsection{Motivating questions}
-One question regarding the brain is, why neurons that perform astoundingly complex calculations become inefficient at computation once they are grown outside of it. In particular, once one takes hippocampal neurons out of the rat brain and cultures them on a dish, they lose their individuality. Living neuronal cultures are characterized by all-or-none network bursts, where practically all the neurons fire simultaneously, with varying degrees of synchrony. While in the brain they can compute the trajectory of the animal in a maze, but as an ensemble grown out of it they seem unable to perform new computations, and can only carry very few bits of information \cite{Feinerman2006}. How is it then that individual neurons are organized in the brain as a splendid computer, but in the dish their computational repertoire seems limited? Obviously, their environment and growth conditions have changed, but can we isolate those elements that are necessary, and perhaps sufficient, to support computation by a living neuronal network? In an effort to tackle such questions, we have embarked on an investigation of the computational abilities of living neuronal networks, and propose here to expand this investigation both theoretically and experimentally.
+Can we take steps toward understanding the fundamental organizing principles of neuronal architecture incorporating developmental, genetic, molecular, cellular and evolutionary perspectives that enable neuronal systems at the organism-environment interface to perform astoundingly complex computations that go beyond what digital computers are capable of in order to simultaneously improve our understanding of biological systems and deepen our perspective on and understanding of the very meaning of computation? The primary goal of this proposal is to dissect this broad question into questions that significantly push outward, without drastically overstepping, the boundaries of what is theoretically and experimentally feasible. One question regarding the structure and function of nervous systems is what features of their biological context can be abstracted and supplemented in the context of cell-cultured neurons that nevertheless enable retaining salient functional aspects of such natural neural networks. In particular, once one takes hippocampal neurons out of the rat brain and cultures them on a dish, they generally lose their individuality. Living neuronal cultures are characterized by all-or-none network bursts, where practically all the neurons fire simultaneously, with varying degrees of synchrony. While in the brain they can compute the trajectory of the animal in a maze, but as an ensemble grown out of it they seem unable to perform new computations, and can only carry very few bits of information \cite{Feinerman2006}. How is it then that individual neurons are organized in the brain as a splendid computer, but in the dish their computational repertoire seems limited? Obviously, their environment and growth conditions have changed, but can we isolate those elements that are necessary, and perhaps sufficient, to support computation by a living neuronal network? How do such attempts strain or alter our very definition of {\it computation}? In an effort to tackle such questions, we have embarked on an investigation of the computational abilities of living neuronal networks, and propose here to expand this investigation both theoretically and experimentally.
 
 On the conceptual side, a number of deep questions arise. What are the structural properties at the level of networks of neurons,
 modules of networks of neurons, and perhaps higher order forms of
 organization necessary to support the capacity for
-abstraction, which is fundamental to computation \cite{Abelson1996} and may likewise be fundamental to
+abstraction, which is generally considered to be fundamental to computation \cite{Abelson1996} and may likewise be fundamental to
 \href{http://en.wikipedia.org/wiki/Cognitive\_architecture}{cognitive
 architecture}, development, and function \cite{Tenenbaum2011}? Given that we have shown boolean
 logic devices capable of being implemented {\em in vitro} using
@@ -34,7 +34,7 @@ within \href{http://en.wikipedia.org/wiki/First-order\_logic}{first} or
 \href{http://en.wikipedia.org/wiki/Higher\_order\_logic}{higher-order
 logic}?
 
-We plan to experimentally develop a number of novel logical devices, as well as use a number of new technologies that we have acquired for the construction of such computational constructs. Notable among these are the optogenetic toolbox that has recently become available. Our access to this toolbox includes light induced neuronal excitation using channelrhodopsins (courtesy of the Deisseroth lab at Stanford and the Yizhar lab at Weizmann) as well as genetically encoded fluorescent labels for optical imaging of neuronal excitation (courtesy of the Cohen lab at Harvard).
+We plan to experimentally develop a number of novel {\it logical devices}, as well as use a number of new technologies that we have acquired for the construction of such biologically constituted computational devices. Notable among these are the optogenetic toolbox that has recently become available. Our access to this toolbox includes light induced neuronal excitation using channelrhodopsins (courtesy of the Deisseroth lab at Stanford and the Yizhar lab at Weizmann) as well as genetically encoded fluorescent labels for optical imaging of neuronal excitation (courtesy of the Cohen lab at Harvard).
 
 Evolutionary forces have shaped the architecture, connectivity as well as the input that neurons grow with inside the brain, all of which are involved in its apparently emergent computational capability. Biological computation in general is set apart from that of electronic computers by the fact that the {\it hardware} (e.g. the cell or the organism) co-evolved with the {\it software} (DNA or the brain respectively). As a result, our {\it software} is naturally co-optimized for the associated {\it hardware}, while in the computer world that is not necessarily, if ever, the case. This insight leads us to propose experiments that will connect the neuronal network with the {\it real} world, and  allow the structure and function to co-evolve in a range of different environmental conditions.
 
@@ -60,12 +60,12 @@ $\lambda$-calculus, serve as a specification
 of computation that is agnostic to the physical modality of
 implementation. If the specification that a neuronal computation device
 should be capable of implementing the
-$\lambda$-calculus, which is Turing complete formal system, a natural first step
+$\lambda$-calculus, which is a Turing-complete formal system, a natural first step
 toward this broad goal is to investigate simple neuronal systems that
 are capable of performing well-defined computations that require a
 capacity for first- or some higher-order logic.
 
-One challenge to be addressed experimentally is whether such a system can be implemented reliably using central nervous system (CNS) neurons, which are individually unreliable components. We have shown previously that complex devices such as a diode, an oscillator and an AND-gate can be engineered using CNS neurons grown on particular geometric configurations \cite{Feinerman2008}. While a complicated configuration of NAND gates could, in principle, enable the construction of a universal Turing machine, this may be difficult to engineer with previously developed methods. Alternative geometric configurations and measurement patterns coupled with developmental selection will enable the identification of configurations of neurons capable of performing more difficult computations.
+One challenge to be addressed experimentally is whether such a system can be implemented reliably using central nervous system (CNS) neurons, which are individually susceptible to stochastic fluctuations and are hence considered to be {\it unreliable components}. We have shown previously that complex devices such as a diode, an oscillator and an AND-gate can be engineered using CNS neurons grown on particular geometric configurations \cite{Feinerman2008}. While a complicated configuration of NAND gates could, in principle, enable the construction of a universal Turing machine, this may be difficult to engineer with previously developed methods. Alternative geometric configurations and measurement patterns coupled with developmental selection will enable the identification of configurations of neurons capable of performing more difficult computations.
 
 To develop higher order computational devices, we will turn to the experimental techniques of microfluidics and optogenetics \cite{Yizhar2011,Kralj2012}.
 It is now possible to monitor with optical means the electrical activity of the network without any collateral damage caused by the fluorescent dye. This is done by genetic incorporation of a fluorescent voltage-indicating protein into the neuron. It is furthermore possible to excite a region of the network optically by activating photosensitive channels that are genetically embedded as well. On top of this, the propagation velocity of a signal inside a one-dimensional neuronal network of the type we are using is constant, and can be reliably predicted. Thus it becomes possible to identify activity in one part of a device, and then excite another region co-incidentally with the arrival of the signal into that area. Different time delays, with the activation before, during or after the arrival of the synaptic input will allow the creation of several neuronal learning scenarios, and the comparison to learning in organisms with brains.
@@ -75,14 +75,14 @@ It is now possible to monitor with optical means the electrical activity of the 
 The $\lambda$-calculus notation is helpful in
 order to define any higher order function. This notation may be
 implicitly familiar to users of imperative programming languages as {\it anonymous functions}. We provide an informal set of examples necessary to clarify our work. Complete details can be found in \cite{Barendregt1985}. We can define a
-standard binary boolean function like the ``and'' function as $\lambda x. \lambda y.(\wedge\,\,x\,\,y)$. Such a lambda expression can apparently be applied to any inputs;
-however the inputs to such a function are not necessarily restricted to
+standard binary boolean function like the AND---which is written using the ``$\wedge$'' symbol---function as $\lambda x. \lambda y.(\wedge\,\,x\,\,y)$. Such a lambda expression can apparently be applied to any inputs;
+however, the inputs to such a function are not necessarily restricted to
 booleans unless we infer that the standard logical operator
-``$\wedge$'' only accepts boolean arguments.
+$\wedge$ only accepts boolean arguments.
 Note that we have used the
 \href{http://en.wikipedia.org/wiki/Polish\_notation}{prefix or Polish
-notation} for the $\wedge$ operator, which
-in the perhaps more common infix notation is written with its arguments
+notation} for the $\wedge$ operator, which,
+in the perhaps more common infix notation, is written with its arguments
 flanking the operator as $x \wedge y$ to mean
 ``$x$ and
 $y$''. We can provide explicit type
@@ -93,7 +93,7 @@ the arguments $\lambda x:bool. \lambda y:bool.(\wedge\,\,x\,\,y)$. We can now al
 [\lambda x:bool. \lambda y:bool.(\wedge\,\,x\,\,y)]:[bool \rightarrow bool \rightarrow bool]
 \end{equation}
 Depending upon conventions with respect to
-\href{http://en.wikipedia.org/wiki/Currying}{currying}, one could read
+\href{http://en.wikipedia.org/wiki/Currying}{currying}\footnote{{\it currying} refers to the way in which a function taking multiple variables simultaneously as arguments and returning some value can be transformed into a sequence of functions that return functions as values such that when all the functions are composed they return the same value as the original multi-variable function.}, one could read
 the type annotation as ``the function that takes two arguments each of
 type $bool$ and returns a values of type
 $bool$'' or ``the function that takes an
@@ -157,23 +157,23 @@ boolean function and two boolean values. For example $hobf \,\, xor \,\, 0 \,\, 
 An important consideration is to state precisely some criterion for
 determining that a particular NLD has achieved potential for an explicit
 form of abstraction such as is indicated in the relationship between
-expressions \ref{eq:boolfulltype} and
-\ref{eq:lamhobf}. In abstracting the binary boolean
+expressions (\ref{eq:boolfulltype}) and
+(\ref{eq:lamhobf}). In abstracting the binary boolean
 operator $\wedge$ to the functional variable
 $f$, which is the fundamental
 transformation enabling the derivation of
-\ref{eq:lamhobf} from
-\ref{eq:boolfulltype}, we imply that any physical
+(\ref{eq:lamhobf}) from
+(\ref{eq:boolfulltype}), we imply that any physical
 implementation must take at least three rather than two inputs and the
 first of these must specify a particular binary boolean operator to
 apply to the latter two boolean input values. This roughly means that
 any system that at least partially implements the lambda expression or
-function specified in equation \ref{eq:lamhobf} and
-listing \ref{camlhobf} respectively , must be capable of
+function specified in Equation (\ref{eq:lamhobf}) and
+Listing \ref{camlhobf} respectively , must be capable of
 interpreting the concept of {\it selection from a set} whose size is
 determined by the subset of the 16 binary boolean operators that is
 already implemented in a lower-level form. Indeed another representation
-of equation \ref{eq:lamhobf} as a partial or total
+of Equation (\ref{eq:lamhobf}) as a partial or total
 set function could be written as $hobf : Hex \times Bool \times Bool \rightarrow Bool$
 where we interpret $Bool$ and
 $Hex$ as two and sixteen element sets
@@ -189,16 +189,15 @@ given the definition: $hobf \,\, \wedge \,\, 1\,\, 0=0$ or
 $hobf \,\, \wedge \,\, 1\,\, 1=1$. However, what is to be expected
 given inputs such as: $hobf \,\, 1 \,\, \wedge\,\, 0$ or
 $hobf \,\, 1 \,\, 1\,\, \wedge$? In these cases an output type
-intuitively associated to $error$ is
+intuitively associated to {\it Error} is
 required to indicate that the realization of a system implementing
-equation \ref{eq:lamhobf} has indeed correctly
+Equation (\ref{eq:lamhobf}) has indeed correctly
 implemented the necessary typing constraints to claim that the function
 has been realized. In the case of neuronal logic devices, this
 alternative output should differ in a measurable way from those
 associated to $1$ and $0$.
 
 \subsection{ANN simulation of abstract computation in NLDs}
-In order to facilitate the formation of a simple higher-order boolean function capable of switching between the AND and OR gate ($\wedge / \vee$) functionality as a result of the growth of patterned cultures of neurons, we designed a potential geometric constraint shown in Figure \ref{fig:nnGeo} to use in simulations of neural network development. We implemented one potential impact upon network connectivity in terms of an artificial neural network (ANN) model. Figure \ref{fig:hintDiag} shows Hinton diagrams for the weights of 3-input 3-layer 1-output feedforward ANNs trained on data representing the $\wedge / \vee$ gate switching task and selected for near perfect performance on this task. Figure \ref{fig:nnDendro} shows a heatmap where neural networks are clustered according to their respective weights in order to determine the degree to which networks capable of performing the $\wedge / \vee$ gate switching task may be clustered into a reduced number of strategies despite the apparent diversity demonstrated in Figure \ref{fig:hintDiag}. We see from Figure \ref{fig:nnDendro} that, while there is considerable diversity in the 50 networks sampled in our simulations, there are also relative similarities between neural network designs that are all approximately equivalent in terms of their capacity to perform $\wedge / \vee$ gate switching.
 
 \begin{figure}
 \begin{center}
@@ -227,8 +226,10 @@ In order to facilitate the formation of a simple higher-order boolean function c
 \caption{}\label{fig:hintDiag}
 \end{subfigure}
 \end{center}
-\caption{(\subref{fig:nnGeo}) Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. The geometric constraint is shown on the left and the artificial neural network wiring diagram representing potential connections whose strength is modulated upon training of the network is shown on the right. (\subref{fig:hintDiag}) Hinton diagrams of feedforward neural network weights for neural networks trained on the and/or gate switching task.}\label{fig:neuralnets}
+\caption{(\subref{fig:nnGeo}) Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. The geometric constraint is shown on the left and the artificial neural network wiring diagram representing potential connections whose strength is modulated upon training of the network is shown on the right. (\subref{fig:hintDiag}) Hinton diagrams of feedforward neural network weights for neural networks trained on the and/or gate switching task. The only purpose of this panel is to demonstrate that there is no obvious pattern that distinguishes networks that all perform well in the $\wedge / \vee$ gate switching task. Clustering the weight-bias matrices that determine the neural networks under investagation is shown to reveal such patterns in Figure \ref{fig:nnDendro}.}\label{fig:neuralnets}
 \end{figure}
+
+In order to facilitate the formation of a simple higher-order boolean function capable of switching between the AND and OR gate ($\wedge / \vee$) functionality as a result of the growth of patterned cultures of neurons, we designed a potential geometric constraint shown in Figure \ref{fig:nnGeo} to use in simulations of neural network development. We implemented one potential impact upon network connectivity in terms of an artificial neural network (ANN) model. Figure \ref{fig:hintDiag} shows a sampling of neural networks represented in terms of their respective Hinton diagrams\footnote{Hinton diagrams are simply a method, analogous to a heat map, of visualizing numerical values from a matrix that are commonly used to display matrices of weights that comprise an ANN in machine learning. The area occupied by a given square in the diagram is proportional to the magnitude of a value in the weight matrix and the color (red for positive and green for negative in this case) indicates the sign of the weight.} for the weights of 3-input 3-layer 1-output feedforward ANNs trained on data representing the $\wedge / \vee$ gate switching task and selected for near perfect performance on this task. From Figure \ref{fig:hintDiag} we see that it is not obvious if there are any general architectural features of ANNs that perform well in the $\wedge / \vee$ gate switching task by simply looking at representations of the network weight-bias matrices. Figure \ref{fig:nnDendro} shows a heatmap where neural networks are clustered according to their respective weights in order to determine the degree to which networks capable of performing the $\wedge / \vee$ gate switching task may be clustered into a reduced number of strategies despite the apparent diversity demonstrated in Figure \ref{fig:hintDiag}. We see from Figure \ref{fig:nnDendro} that, while there is considerable diversity in the 50 high-performing networks derived in our simulations, there are also relative similarities between neural network designs that are all approximately equivalent in terms of their capacity to perform $\wedge / \vee$ gate switching. In particular these cluster into approximately three types that can be distinguished from one another by inspecting their weight-bias matrices, but that nevertheless perform the same function. The impact of this result on our experimental design is to account for the fact that even in natural neural networks, there is likely a degenerate relationship between structure and function, even if additional developmental or energetic constraints may favor a particular structure in an environmental context that requires performance of multiple different tasks exemplified simply by the $\wedge / \vee$ gate switching we have described to support clear exposition of the complicated issue of degeneracy in structure-function relationships as they pertain to networks of living and artificial neurons.
 
 \begin{figure}
 \begin{center}
@@ -237,7 +238,7 @@ In order to facilitate the formation of a simple higher-order boolean function c
 \caption{Theoretical geometric constraint facilitating the formation of the $\wedge / \vee$ gate switch. A heatmap that is clustered along rows representing individual weights at particular positions within the ANN and along columns according to the ANN from which the weights derive showing the relationship between low error strategies that emerge in training 50 independent ANNs on the $\wedge / \vee$ gate switching task.}\label{fig:nnDendro}
 \end{figure}
 
-\subsection{Experimental design}
+\subsection{Experimental design}\label{sec:expdesign}
 Engineering {\it flexible} living neuronal networks that will switch between several possible logical functions according to the input presented to them is a significant experimental challenge. Of course, designs that are possible and relevant theoretically such as the pattern of Figure \ref{fig:nnGeo}, pose several novel challenges in the experimental implementation of the network. In particular, the connectivity between different parts of the culture has to be precisely tailored to the specifications of the theoretical outlay. The first aspect of this is that the connections must, at times, cross each other without intersecting. The second is that the connections are all given a particular directionality, and the third is that a hierarchy of connections is assumed, with their importance changing in space.
 
 The experimental approach to these difficulties is to use three novel techniques that have been introduced into the field recently, and include tapering geometric guidance, microfluidic 3D overlay and temporal patterning by sequential seeding of cultures at different times into different areas of the pattern.
@@ -268,7 +269,7 @@ In addition, we expect to utilize {\it temporal patterning}, an important additi
 
 As in any successful experimental design effort, we expect a continuous back-and-forth process between the lab and the theory, with ideas for novel implementations of NLDs stemming from fundamental theoretical considerations being tested out in the lab. This will serve as an immediate reality check (within the limitations of experimental time scales, of course) for the conceptual ideas. Both the ability to construct such NLDs and the actual function in practice versus that predicted will be monitored in this way. We expect this type of collaboration of theory and experiment to be extremely conducive to obtaining efficient NLDs on one and deep insight into fundamental issues of biological computation on the other. Addressing the need to integrate theory and experiment in rapid feedback cycles is indeed one of the primary factors necessitating this particular international collaboration.
 
-\subsection{Higher-Order NLDs}
+\subsection{Higher-Order NLDs}\label{sec:honlds}
 A natural extension of the simple NLDs we have built is the addition of complexity to the network structures. Looking at our current technology, the basic one dimensional structure is designed as a feed-forward device, where the flow of information is linear and directed. Activity originates at so-called {\it Burst Initiation Zones} \cite{Feinerman2007}, and propagates from there along the linear configuration of the network. In the simplest current experimental one dimensional construction, axons propagate both forward and backward and thus resulting connections are in both directions. This implies that some recurrent connectivity is already a part of the simple linear structures that we have built. However, once we realize that the neuron that has fired has a delay time before it can fire again, we realize that the role of loops is small \cite{Feinerman2006}. In particular, almost all feedback activity is eliminated in the {\it Diode} construction [3], which allows axons to go with strong preference in one direction. Using this engineering approach, we have built an oscillator with one closed circuit \cite{Feinerman2008}, which relies on the {\it Diode} construct and inherently disallows feedback activation. This drives the system into the basin of attraction of a limit cycle, and we have produced a periodic oscillation in this manner.
 
 An additional level of complexity is that of networks incorporating loops, thereby allowing feedback as well as feed-forward activation, both processes that are of importance in the brain \cite{Ahissar2003}. In general, for our experimental network, the fundamental object is the relation between two nodes, or a connection of two neurons. The simplest structure that describes such a network theoretically is the directed acyclic (tree-like) graph, which ignores the possibility of any connections looping back to create a closed circuit. Since a tree-like structure is more tractable analytically, many theoretical approaches utilize it. A deviation from the tree structure involves allowing for cycles or loops.
