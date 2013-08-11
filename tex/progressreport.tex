@@ -1,0 +1,81 @@
+%%%%%%%%% MASTER -- compiles the 4 sections
+
+\documentclass[11pt,letterpaper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}                                                      %%
+%%%%%%%%%% EXACT 1in MARGINS %%%%%%%                                   %%
+\setlength{\textwidth}{6.5in}     %%                                   %%
+\setlength{\oddsidemargin}{0in}   %% (It is recommended that you       %%
+\setlength{\evensidemargin}{0in}  %%  not change these parameters,     %%
+\setlength{\textheight}{8.5in}    %%  at the risk of having your       %%
+\setlength{\topmargin}{0in}       %%  proposal dismissed on the basis  %%
+\setlength{\headheight}{0in}      %%  of incorrect formatting!!!)      %%
+\setlength{\headsep}{0in}         %%                                   %%
+\setlength{\footskip}{.5in}       %%                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                   %%
+\newcommand{\required}[1]{\section*{\hfil #1\hfil}}                    %%
+\renewcommand{\refname}{\hfil References Cited\hfil}                               %%
+                                                                                
+                                               %%
+%\bibliographystyle{plain}                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%PUT YOUR MACROS HERE
+\input{sub/header}
+
+%\includeonly{NSFsumm}
+
+\begin{document}
+Student Advisory Committee Progress Report -- Cameron Smith -- August 13, 2013
+\section{Current Goals and Rationales}
+The goals for the period of research 01/2013--07/2013 were to get in touch with and develop a relationship with a mathematician to review some components of my work, and to continue work on a manuscript describing the relationship between the the collections of states capable of being accessed by non-modular and modular genotype-phenotype mappings. The latter goal now forms the basis of my overall thesis goal which includes in addition a more general characterization of the relationship between the so-called \emph{marginal problem}\footnote{\begin{tiny}
+given a list of joint distributions of certain subsets of random variables $A_1, \ldots , A_n$, is it possible to find a joint distribution for all these variables, such that this distribution marginalizes to the given ones? One obvious necessary condition [sometimes referred to as the Kolmogorov consistency conditions] is that for any two of the given distributions which can be marginalized to the same subset of variables, the resulting marginals should be the same \cite{Fritz}
+    \end{tiny}}, the topology of genotype-phenotype mappings, and the architecture of the gene-regulatory networks underlying them.
+
+In addition to its biological relevance that I aim to fully develop in my thesis, the broader goal brings my research into contact with several additional fields that would all benefit from work aimed at a better understanding of and potential means of addressing the marginal problem including logic, probability theory, algebraic geometry, machine learning, and physics.
+
+\section{Progress Toward the Current Goals}
+In January 2013 I began meeting on a regular basis with Noson Yanofsky who is a mathematician at Brooklyn College. Over the past six months Professor Yanofsky has been extremely generous with his time both allowing me to visit him at Brooklyn College and visiting me at Einstein. My interaction with Professor Yanofsky has helped me tremendously with respect to focusing my work and understanding which mathematical tools are most helpful to the problems at hand.
+
+I have drafted a manuscript and an associated presentation that directly addresses the problem outlined in the previous section. In this manuscript I formalize the genotype-phenotype map in terms of the functorial presheaf structure of probabilistic models previously laid out by Abramsky and Brandenburger \cite{Abramsky2011}. I then demonstrate how each of what I refer to as non-modular and modular probabilistic models can be associated to a convex polytope. The convex polytope associated to each of the non-modular and modular probabilistic models corresponds to the space of possible functions achievable by the genotype-phenotype mappings as previously formalized. Having done this I compute the ratio of the volume of the non-modular convex polytope to that of the modular convex polytope. In the process I make use of a type of probabilistic graphical model known as the Markov random field, and this representation of the formalism provides the clearest relationship to the biological interpretation of the entire framework.
+
+I have found that the space of probability distributions associated to modular collections of genotype-phenotype mappings that also exhibit feedback strictly includes the space of probability distributions associated to non-modular collections of genotype-phenotype mappings. I have computed specific instances of this general fact for several different gene regulatory network architectures associated to probabilistic graphical models. This result has an important consequence for evolutionary theory. While the environment is in any state lying in the space between the functions achievable by the non-modular and the modular genotype-phenotype mappings, there will be exceptionally strong selection in favor of the genotype-phenotype mappings possessing modular as opposed to the non-modular architecture.
+
+\section{Additional Progress}
+Together with two other graduate students in the Bergman lab, I have been involved in preliminary experiments and data analysis for an artificial laboratory evolution experiment that I designed during my first year as a graduate student in the Bergman lab. While this project will not be part of my thesis, and assuming it is successful, it will eventually become part of the scientific work at least partially accomplished during my time as a graduate student at Einstein.
+
+Over the previous project period the results of three collaborative projects have been published:
+
+\begin{enumerate}
+\item Chow S-K, Smith, C et al. (2013) Disease-enhancing antibodies improve the efficacy of bacterial toxin-neutralizing antibodies. Cell host \& microbe 13:417–28. \href{http://dx.doi.org/10.1016/j.chom.2013.03.001}{doi:10.1016/j.chom.2013.03.001}.
+\item Garcia-Solache MA, Izquierdo-Garcia D, Smith C, Bergman A, Casadevall A (2013) Fungal virulence in a lepidopteran model is an emergent property with deterministic features. mBio 4:e00100–13. \href{http://dx.doi.org/10.1128/mBio.00100-13}{doi:10.1128/mBio.00100-13}.
+\item van Oers J, Edwards Y, Chahwan R, Zhang W, Smith C, Pechuan J, Schaetzlein S, Jin B, Wang Y, Bergman A, Scharff MD, Edelmann W (2013) The MutS$\beta$ complex is a modulator of p53-driven tumorigenesis through its functions in both DNA double strand break repair and mismatch repair. Oncogene (in press).
+\end{enumerate}
+
+I have completed work on two additional collaborative projects with members of the Edelmann lab. One is on-going with postdoctoral fellow Elena Tosti regarding the study of gene expression variability in a mouse model of colon cancer. The other with former postdoctoral fellow Uwe Werling involves the study of Holliday junction formation and resolution during meiosis, and it is in the process of being written up and submitted for publication.
+
+\section{Proposed New Goals and Rationales}
+I will continue revising the manuscript I have worked on for the past six months until it is ready to be submitted for publication. This may involve pursuing some of the following directions that may also generate additional work that will become separate from the current manuscript:
+\begin{itemize}
+\item compute non-modular:modular ratio for
+\begin{enumerate}
+\begin{footnotesize}
+\item more interesting network topologies on binary graphs
+\item graphs with higher-order edges (i.e. hypergraphs)
+\end{footnotesize}
+\end{enumerate}
+\item characterize formal topologies induced on spaces of genotypes, phenotypes and fitnesses by genotype-phenotype and phenotype-fitness mappings
+\item examine relationship to the general \textbf{marginal problem} and continue to connect my approach to those coming from other fields including logic, probability theory, algebraic geometry, machine learning, and physics.
+\item design an experiment to clarify how some aspects of these ideas can be tested in principle
+\end{itemize}
+
+I have already begun work and have some results that I have not yet presented connecting my current approach making use of the representation of relationships between spaces of probability distributions as polytopes to the algebraic geometric approach to graphical models using algebraic varieties and their associated Gr\"{o}bner bases developed in part by Bernd Sturmfels (mathematics, UC Berkeley) and Reinhard Laubenbacher (biology, Virgina Tech) in \emph{algebraic statistics} \cite{PachterLior2005}. In addition, I have also done significant reading in the machine learning literature and have found some very important applications of the marginal problem upon which my work may draw and to which it may contribute \cite{Wainwright2007}.
+
+Following completion of the manuscript on gene regulatory network architecture and the marginal problem described here, I will continue work on two previously drafted manuscripts. Together, these three manuscripts will form the body of my thesis. My current plan is to begin compiling my thesis with these three manuscripts, relevant background material, appropriate references, and directions for future work as soon as I have submitted the primary manuscript referred to throughout this progress report. 
+
+Taking the current status of my work into account and my desire to contribute some time to the experiment mentioned above, my tentative proposal for graduation date is May 2015, approximately one year eight months from this meeting.
+
+\include{NSFrefs}
+
+\end{document}
